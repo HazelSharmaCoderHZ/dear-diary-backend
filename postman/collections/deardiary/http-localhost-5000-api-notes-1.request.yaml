@@ -1,0 +1,7 @@
+$kind: http-request
+name: http://localhost:5000/api/notes
+url: http://localhost:5000/api/notes
+method: GET
+headers:
+  Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YmFlMzIzZGViMGQxOTU3YmQ0ZjI4MiIsImlhdCI6MTc3Mzg1NTUyNSwiZXhwIjoxNzc0NDYwMzI1fQ.YYgAHy8BhDRkZMEUnS-IehcNBaDs3oieM3acFYaFsSI
+order: 3400366060052750

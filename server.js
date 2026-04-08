@@ -9,13 +9,15 @@ const moodRoutes = require("./routes/moodRoutes");
 
 const app = express();
 
-// ✅ CORS (ONLY ONCE)
 app.use(cors({
   origin: [
     "http://localhost:3000",
+    "https://localhost:3000",
     "https://journaldeardiary-pqsj.vercel.app"
   ],
-  credentials: true
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 app.use(express.json());
