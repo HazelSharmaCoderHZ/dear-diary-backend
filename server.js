@@ -9,7 +9,7 @@ const moodRoutes = require("./routes/moodRoutes");
 
 const app = express();
 
-app.use(cors({
+const corsOptions = {
   origin: [
     "http://localhost:3000",
     "https://journaldeardiary-pqsj.vercel.app"
@@ -17,9 +17,12 @@ app.use(cors({
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
-}));
+};
 
-app.options("*", cors());
+app.use(cors(corsOptions));
+
+// ✅ handle preflight without wildcard
+app.options(/.*/, cors(corsOptions));
 
 app.use(express.json());
 
