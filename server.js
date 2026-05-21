@@ -6,7 +6,7 @@ require("dotenv").config();
 const authRoutes = require("./routes/authRoutes");
 const notesRoutes = require("./routes/notesRoutes");
 const moodRoutes = require("./routes/moodRoutes");
-
+const analyzeRoutes = require("./routes/analyzeRoutes");
 const app = express();
 
 app.use(cors({
@@ -26,7 +26,7 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/notes", notesRoutes);
 app.use("/api/moods", moodRoutes);
-
+app.use("/api/analyze", analyzeRoutes);
 // ✅ TEST
 app.get("/", (req, res) => {
   res.send("API running...");
