@@ -29,15 +29,10 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/notes", notesRoutes);
 app.use("/api/moods", moodRoutes);
-<<<<<<< HEAD
+
 app.use("/api/analyze", analyzeRoutes);
 // ✅ TEST
-=======
 
->>>>>>> 4370c9d97acaad802840db06270a0b83e6560e45
-app.get("/", (req, res) => {
-  res.send("API running...");
-});
 
 const PORT = process.env.PORT || 5000;
 
